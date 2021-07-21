@@ -6,7 +6,9 @@ Demo web app have basic vuln in feature:
 pip install requirements.txt
 # before run 
 config mail request and mail reply 
-in file server/app.py and attack/solve.py
+
+in file app/app.py and attack/solve.py
+
 [DETACH]
 # run server
 python3 app.py
