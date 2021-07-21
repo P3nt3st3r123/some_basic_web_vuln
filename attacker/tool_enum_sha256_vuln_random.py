@@ -50,3 +50,4 @@ def go(block_date):
   return go(block_date)
 
 # go(None)
+# https://jsur.in/posts/2020-11-23-dragon-ctf-2020-bit-flip-writeups
