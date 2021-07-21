@@ -1,0 +1,10 @@
+Funder                      |Purpose Funding  |Scale
+Jon Mills                   |Research Project |£10,000
+European Science Foundation |Event            |£10,000
+Twitter UK                  |Event            |£10,000
+Balderton Capital           |Event            |£10,000
+Open Rights Group           |Research Project |£10,000
+The British Poultry         |Research Project |£10,000
+County Council Network      |Research Project |£10,000
+Red Cross                   |Research Project |£10,000
+Sage                        |Research Project |£10,000

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+	<h3 class="title">Forget password</h3>
+	<div class="box">
+	{%- with messages = get_flashed_messages() %}
+	{%- if messages %}
+		<div class="notification is-danger">
+			{{ messages[0] }}
+		</div>
+	{%- endif %}
+	{%- endwith %}
+		<form method="POST" action="/forget">
+			{% for name,field in form._fields.items() -%}
+			<div class="field">
+				<div class="control">
+				{% if field.type == 'SubmitField'%}
+					{{ field(class_="button is-block is-info is-large is-fullwidth",placeholder=name) }}
+				{% else %}
+					{{ field(class_="input is-large",placeholder=name) }}
+				{% endif %}
+				</div>
+			</div>
+			{%- endfor %}
+		</form>
+	</div>
+</div>
+{% endblock %}

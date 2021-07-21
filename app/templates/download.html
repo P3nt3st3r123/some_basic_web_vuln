@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link -->
+<div class="column is-4 is-offset-4">
+	<h3 class="title">Download File</h3>
+	
+	<div class="box">
+	{%- with messages = get_flashed_messages() %}
+	{%- if messages %}
+		<div class="notification is-danger">
+			{{ messages[0] }}
+		</div>
+	{%- endif %}
+	{%- endwith %}
+	{%- if files %}
+		{%- for key,value in files.items() %}
+		<a href="{{ value }}" class="button is-link is-medium is-fullwidth">{{ key }}</a><br>
+		{%- endfor %}
+	{% endif %}
+	</div>
+</div>
+{% endblock %}

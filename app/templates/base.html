@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<!-- https://github.com/lemonsaurus/django-simple-bulma -->
+<!-- https://bulma.io/documentation/elements/button/ -->
+<!-- https://stackoverflow.com/questions/3727045/set-variable-in-jinja -->
+<!-- https://jinja.palletsprojects.com/en/3.0.x/ -->
+<!-- https://stackoverflow.com/questions/36870953/jinja2-how-to-remove-trailing-newline -->
+<!-- https://stackoverflow.com/questions/35775207/remove-unnecessary-whitespace-from-jinja-rendered-template/35777386 -->
+<!-- https://stackoverflow.com/questions/21991479/jinja2-correctly-indent-included-block -->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flask Auth Example</title>
+	<!-- https://github.com/jgthms/bulma -->
+	<!-- https://bulma.io/documentation/overview/start/ -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+</head>
+
+<body>
+	<section class="hero is-primary is-fullheight">
+
+		<div class="hero-head">
+			<nav class="navbar">
+				<div class="container">
+					<div id="navbarMenuHeroA" class="navbar-menu">
+						<div class="navbar-end">
+							<a href="{{ url_for('index') }}" class="navbar-item">
+								Home
+							</a>
+							{% if current_user.is_authenticated -%}
+							<a href="{{ url_for('profile') }}" class="navbar-item">
+								Profile
+							</a>
+							<a href="{{ url_for('download') }}" class="navbar-item">
+								Download file
+							</a>
+							{%- endif %}
+							{% if not current_user.is_authenticated -%}
+							<a href="{{ url_for('login') }}" class="navbar-item">
+								Login
+							</a>
+							<a href="{{ url_for('register') }}" class="navbar-item">
+								Sign Up
+							</a>
+							<a href="{{ url_for('forget_password') }}" class="navbar-item">
+								Forget Password
+							</a>
+							{%- endif %}
+							{% if current_user.is_authenticated -%}
+							<a href="{{ url_for('logout') }}" class="navbar-item">
+								Logout
+							</a>
+							{%- endif %}
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</div>
+		
+	<div class="block" >
+		If something wrong report to: <strong>Admin@Admin.Admin</strong>
+	</div>
+	</section>
+</body>
+
+</html>

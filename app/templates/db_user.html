@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link -->
+<div class="column">
+	<h3 class="title is-offset-4">List User</h3>
+	
+	<div class="container is-info">
+		<!-- <div class="notification is-info"> -->
+		{%- with messages = get_flashed_messages() %}
+		{%- if messages %}
+			<div class="notification is-danger">
+				{{ messages[0] }}
+			</div>
+		{%- endif %}
+		{%- endwith %}
+			<div class="notification is-warning">
+				<div class="columns">
+					<div class="column is-3">Email</div>
+					<div class="column is-3">Usernme</div>
+					<div class="column is-6">Password Hash</div>
+				</div>
+			</div>
+		{%- if info_users %}
+			{%- for email,usernme,hash_password in info_users %}
+			<div class="notification is-info">
+				<div class="columns">
+					<div class="column is-3">{{email}}</div>
+					<div class="column is-3">{{usernme}}</div>
+					<div class="column is-6">{{hash_password}}</div>
+				</div>
+			</div>
+			{%- endfor %}
+		{% endif %}
+	</div>
+</div>
+{% endblock %}
