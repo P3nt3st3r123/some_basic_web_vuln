@@ -20,7 +20,7 @@ from colorama import init
 
 # IP_SERVER,PORT = '127.0.0.1',9000
 IP_SERVER,PORT = 'localhost',9000
-smtp_host,smtp_port,smtp_username,smtp_pass = 'smtp.gmail.com',587,'[DETACT]',"[DETACT]"
+smtp_host,smtp_port,smtp_username,smtp_pass = 'smtp.gmail.com',587,'[DETACH]',"[DETACH]"
 
 app = Flask(__name__)
 app.config.from_object('config')
