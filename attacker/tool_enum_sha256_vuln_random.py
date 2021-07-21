@@ -50,5 +50,3 @@ def go(block_date):
   return go(block_date)
 
 # go(None)
-# [+] found block: 000000000000000003cf4d4204d2a2f1fa76e32ae8f4f911c4c630ffd5f50a8f
-#  |  use seed 54fb3cbca5ab07e88926a4aa936e7cdff6f3ce64b6645cea511681a661c6240a
