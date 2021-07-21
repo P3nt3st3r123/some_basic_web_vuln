@@ -14,7 +14,7 @@ from tool_enum_sha256_vuln_random import go
 
 pre_number_mess = 0
 firstname,lastname = 'jerermy','renner'
-ip_mail,port_mail,username_mail,password_mail,SSL = "pop.gmail.com",995,"[DETACT]","[DETACT]",True
+ip_mail,port_mail,username_mail,password_mail,SSL = "pop.gmail.com",995,"[DETACH]","[DETACH]",True
 
 proxies={"http": "http://127.0.0.1:8080", "https": "https://127.0.0.1:8080"}
 headers = {
